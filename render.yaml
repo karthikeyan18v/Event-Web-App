@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: event-calendar-api
+    env: node
+    plan: free
+    branch: main
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: mongodb+srv://eventwebapp:eventwebapp@cluster0.0okxutz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
